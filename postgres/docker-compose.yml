@@ -1,0 +1,21 @@
+# postgres docker-compose 
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=n8n_user
+      - POSTGRES_PASSWORD=n8n_password
+      - POSTGRES_DB=n8n
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    restart: always
+    networks:
+      - ai_network
+
+networks:
+  ai_network:
+    external: true

@@ -1,0 +1,25 @@
+# n8n on ai_network
+
+services:
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=n8n
+      - DB_POSTGRESDB_USER=n8n_user
+      - DB_POSTGRESDB_PASSWORD=n8n_password
+      - GENERIC_TIMEZONE=Europe/Zurich
+    volumes:
+      - ./data:/home/node/.n8n
+    restart: always
+    networks:
+      - ai_network
+
+networks:
+  ai_network:
+    external: true

@@ -1,0 +1,48 @@
+# Node.js dependencies and logs
+node_modules/
+*.log
+
+# Python-related (just in case)
+__pycache__/
+*.py[cod]
+
+# macOS System files
+.DS_Store
+
+# Windows System files
+Thumbs.db
+desktop.ini
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Docker-related
+docker-compose.override.yml
+.env
+*.bak
+
+# Postgres data
+postgres/data/
+
+# n8n persistent data
+n8n/data/
+
+# Ollama persistent data
+ollama/data/
+
+# Qdrant data
+qdrant/data/
+
+# Temporary files
+*.swp
+*.tmp
+*.temp
+*.bak
+
+# Any assets like images, keep out unwanted
+assets/*.bak
+assets/*.tmp
