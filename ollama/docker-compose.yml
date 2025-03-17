@@ -2,12 +2,12 @@
 
 services:
   ollama:
-    image: ollama/ollama:latest
+    image: "ollama/ollama:latest"
     container_name: ollama-cpu
     ports:
       - "11434:11434"
     volumes:
-      - ./ollama/data:/root/.ollama
+      - "./ollama/data:/root/.ollama"
     environment:
       - MODEL=${OLLAMA_MODEL}
     restart: always

@@ -1,0 +1,6 @@
+apiVersion: v2
+name: ai-base
+description: A Helm chart for deploying AI-Base Starter Kit include postgres & Ollama base model with minikube
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
